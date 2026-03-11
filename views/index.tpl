@@ -4,7 +4,6 @@
     <img src='\static\images\logo_nav.png'>
     <p></p>
     <h1>Добро пожаловать на мой сайт</h1>
-    <p class="lead">Я учусь создавать сайты</p>
     <p><a href="http://bottlepy.org/docs/dev/index.html" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
 </div>
 
@@ -28,3 +27,10 @@
         <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
     </div>
 </div>
+
+<h3> Ask a Question </h3>
+<form action="/home" method="post">
+        <p><textarea rows="2" cols="50" name="QUEST" placeholder="Your question" style="resize: none;"></textarea></p> 
+        <p><input type="text" size="50" name="ADRESS" placeholder="Your email"></p>
+        <p><input type="submit" value="Send" class="btn btn-default"></p>
+</form>
