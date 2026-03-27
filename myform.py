@@ -1,6 +1,9 @@
 from bottle import post, request
 import re
 from datetime import datetime
+import pdb
+
+questions = {}
 
 @post('/home', method='post')
 def my_form():
@@ -10,15 +13,18 @@ def my_form():
     email = request.forms.get('ADRESS')
     
 
-    if not question or not username or not email:
-        return "Error: All fields must be filled!"
-    
+    if not question or not username or not email or question.strip() == "" or username.strip() == "":
+        return "Error! All fields must be filled!"
+  
 
-    email_pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+    email_pattern = r'^[a-zA-Z0-9]{4,19}@[a-zA-Z0-9.-]{2,10}\.[a-zA-Z]{2,5}$'
     if not re.match(email_pattern, email):
-        return "Error: Invalid email format!"
+        return "Error! Invalid email format!"
     
+    questions[email] = question
+    pdb.set_trace()
 
-    current_date = datetime.now().strftime("%Y-%m-%d")
+    current_date = datetime.now().strftime("%d-%m-%Y")
     
     return f"Thanks, {username}! The answer will be sent to {email}. Access Date: {current_date}"
+
