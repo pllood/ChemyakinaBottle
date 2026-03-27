@@ -21,7 +21,7 @@ def my_form():
     if not re.match(email_pattern, email):
         return "Error! Invalid email format!"
     
-    questions[email] = question
+    questions[email] = [username, question]
     pdb.set_trace()
 
     current_date = datetime.now().strftime("%d-%m-%Y")
