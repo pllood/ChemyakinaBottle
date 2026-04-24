@@ -1,0 +1,20 @@
+{
+    "pchdmh@gmail.com": [
+        "what?",
+        "where?",
+        "WHAT?",
+        "why?"
+    ],
+    "oksana@mail.ru": [
+        "what?",
+        "WHAT?",
+        "where?",
+        [
+            "oksana",
+            "where"
+        ]
+    ],
+    "vika@mail.ru": [
+        "why?"
+    ]
+}
